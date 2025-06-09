@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lilin Abadi</title>
+
+    <style>
+      :root {
+  --primary: #ffffff;
+  --bg: #a88caf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(249, 248, 255, 0.699);
+  border-bottom: 1px solid #c49acc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #56385f;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #4f345a;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #57437a;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/*Hero Section*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header1.bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(219, 196, 230, 0.651) 3%,
+    rgba(192, 189, 243, 0) 25%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: rgba(87, 72, 114, 0.8);
+  text-shadow: 4px 4px 7px rgba(254, 250, 255, 0.479);
+  line-height: 1.2;
+  top : 50px;
+}
+
+.hero .content h1 span {
+  color: var(--primary)
+}
+
+.hero .content p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 0;
+  color: rgba(218, 215, 211, 0.8);
+  text-shadow: 2px 2px 4px rgba(229, 158, 236, 0.8) ;
+  font-style: oblique;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #503870;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5rem;
+  box-shadow: 1px 1px 3px rgba(89, 65, 99, 0.8);
+}
+
+
+/*member Section*/
+.Member {
+  padding: 7rem 7% 1.4rem;
+  }
+  
+  .Member h2 {
+    text-align: center;
+    font-size: 3.7rem;
+    margin-bottom: 6rem;
+    color: rgba(255, 255, 255, 0.918);
+    text-shadow: 2px 2px 4px rgba(95, 57, 117, 0.705);
+  }
+  
+  .Member .row {
+    display: flex;
+  }
+  
+  
+  .Member .row content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+  }
+  
+  .Member .content h3 {
+    text-align: justify;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration-line: overline;
+    text-decoration-line: underline;
+    text-decoration-color: #56385f;
+    
+  }
+
+  .Member .cta {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  font-style: italic;
+  color: #fdfaff;
+  background-color: rgba(116, 114, 233, 0.8);
+  border-radius: 5rem;
+  box-shadow: 1px 1px 3px rgba(89, 65, 99, 0.8);
+}
+
+
+/*produk Section*/
+.Produk {
+  padding: 7rem 7% 1.4rem;
+  }
+  .Produk h2 {
+  text-align: justify;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 4px rgba(198, 158, 236, 0.8);
+  }
+  .Produk p {
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.8);
+  }
+  .Produk .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: rgba(228, 159, 235, 0.8);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px rgba(89, 65, 99, 0.8);
+  }
+  .Produk .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content:baseline;
+  
+  color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .Produk .row .menu-card {
+  text-align: center;
+  font-size: 1.5rem;
+  }
+  
+  .Produk .row .menu-card img {
+  border-radius: 1px;
+  width: 30%;
+  left : 100px;
+  }
+  
+  .Produk .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+  }
+
+  /*proses Section*/
+.Proses {
+  padding: 7rem 7% 1.4rem;
+  }
+  .Proses h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: rgb(255, 251, 251);
+  text-shadow: 2px 2px 4px rgba(242, 184, 253, 0.384);
+  }
+  .Proses h3 {
+     text-align: justify;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: rgb(72, 39, 110);
+  text-shadow: 2px 2px 4px rgba(233, 179, 247, 0.637);
+  }
+  .Proses ol {
+     text-align: justify;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px rgba(252, 167, 255, 0.432);
+  }
+  .Proses p {
+  text-align: justify;
+  margin: auto;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  }
+  .Proses .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: rgba(228, 159, 235, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(89, 65, 99, 0.8);
+}
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color:rgb(255, 251, 248);
+  shape-image-threshold: inherit;
+}
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color:#ffffff;
+  border: 1px solid;
+  padding-left: 2rem;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color:rgb(255, 255, 255)
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color:#ffffff;
+  background-color:rgba(255, 255, 255, 0.8);
+  border: 1px solid;
+}
+
+.Kekurangan   {
+  padding: 7rem 7% 1.4rem;
+}
+.Kekurangan .cta {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+  background-color: rgba(115, 74, 168, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(89, 65, 99, 0.8);
+}
+.Kekurangan h2 {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2.7rem;
+  color: rgb(0, 0, 0);
+}
+.Kekurangan p {
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+.Kekurangan ol {
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+.Kelebihan {
+  padding: 7rem 7% 1.4rem;
+}
+.Kelebihan .cta {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+  background-color:rgba(115, 74, 168, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(89, 65, 99, 0.8);
+}
+.Kelebihan h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  font-size: 2.7rem;
+  color: rgb(0, 0, 0);
+}
+.Kelebihan p {
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+.Kelebihan ol {
+  text-align: justify;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+/*Footer*/
+footer{
+  background-color:#ccc9c3;
+  padding: 2rem 0;
+  margin-top: 3 rem;
+  text-align: center;
+}
+footer .social a {
+  color:rgba(243, 236, 230, 0.8);
+}
+footer .links a{
+  color:rgba(100, 90, 83, 0.8);
+}
+footer .credit p{
+  color:#000000;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #f8d996;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: rgba(170, 102, 0, 0.8);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/*Menu Section*/
+.menu {
+  padding: 7rem 7% 1.4rem;
+  }
+  .menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: rgba(85, 55, 11, 0.8);
+  }
+  .menu p {
+  text-align: center;
+  max-width: 45rem;
+  margin: auto;
+  font-size: 1.4rem;
+  color: rgba(85, 34, 11, 0.8);
+  }
+  
+  .menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+  
+  color: rgba(151, 90, 20, 0.8);
+  }
+  
+  .menu .row .menu-card {
+  text-align: center;
+  font-size: 1.5rem;
+  }
+  
+  .menu .row .menu-card img {
+  border-radius: 5%;
+  width: 30%;
+  }
+  
+  .menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+  }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/Style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Lilin Abadi</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#member">Our Member</a>
+        <a href="#produk">Produk</a>
+        <a href="#proses">Proses</a>
+        <a href="#kekurangan">Kekurangan</a>
+        <a href="#kelebihan">Kelebihan</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!--Hero Section Start-->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Lilin abadi ramah lingkungan</h1>
+        <p>Lilin Abadi dari minyak jelantah</p>
+        <a href="#" class="cta"> Enjoy our project!</a>
+      </main>
+    </section>
+    <!--Hero Section End-->
+
+<!-- member Section Start -->
+ <section id="member" class="Our Member">
+  <h2><span>Our</span> Member</h2>
+  <div class="row">
+  </div>
+
+  <div class="content">
+  <h3>Introducing Our Member</h3>
+    <a href="#" class="cta">Humaira Maika Ramadani</a>
+      <a href="#" class="cta">Amelia Dwi Pramudita</a>
+        <a href="#" class="cta">Athiyah Hanifah</a>
+          <a href="#" class="cta">Kezia Aurellie Zahra</a>
+  </div>
+  </div>
+  </section>
+  <!-- member Section End -->
+   
+<!-- produk Section Start -->
+<section id="produk" class="Produk">
+  <a href="#" class="cta"> Deskripsi</a>
+  
+  <p>
+    Lilin abadi dari minyak jelantah adalah produk daur ulang yang dibuat dengan memanfaatkan minyak goreng bekas sebagai bahan utama.
+    Lilin ini dapat digunakan sebagai sumber pencahayaan alternatif dan juga memiliki nilai estetika serta aromaterapi jika ditambahkan pewangi.
+    Pemanfaatan minyak jelantah untuk membuat lilin bertujuan untuk mengurangi limbah rumah tangga yang dapat mencemari lingkungan jika dibuang sembarangan.
+    Selain itu, lilin ini dapat menjadi solusi penerangan darurat dan menambah nilai estetika ruangan.
+  </p>
+  <p>Siapa pun dapat membuat lilin ini di rumah, termasuk anak-anak dengan bimbingan orang tua. 
+     Proses pembuatannya sederhana dan tidak memerlukan keahlian khusus.
+     Lilin ini dapat dibuat kapan saja dan saat tidak mempunyai lilin saat lampu padam, 
+     terutama saat memiliki minyak jelantah bekas yang tidak terpakai.
+  </p>
+  <p>
+   Pembuatan lilin ini dapat dilakukan di rumah masing-masing, 
+   baik di dapur maupun di ruang terbuka yang aman dari bahan mudah terbakar.
+  </p>
+  
+  <div class="row">
+  <div class="menu-card">
+  <img
+  src="img/img.menu1.jpg"
+  alt="Signature Pastry"
+  class="menu-card-img"
+  />
+  </div>
+ 
+
+  </div>
+  </section>
+  
+<!-- produk Section End -->
+
+<!-- proses Section Start -->
+ <section id="proses" class="Proses">
+  <a href="#" class="cta"> Langkah-langkah pembuatan</a>
+
+ <h3>>Siapkan Bahan dan Alat</h3>
+
+ <ol>
+  <li> Wadah tahan panas (seperti gelas kaca)</li>
+  <li>Batu kecil atau kerikil sebagai penyangga</li>
+  <li>Air</li> 
+  <li>Minyak jelantah</li>
+  <li>Sumbu (bisa menggunakan tusuk sate yang dililit dengan tali)</li>
+ </ol>
+
+ <h3><a href="https://youtu.be/2Snub1FOG6U?feature=shared">> Langkah Pembuatan</a></h3>
+ <ol>
+  <li>Masukkan batu kecil ke dalam wadah hingga seperempat tinggi wadah</li>
+  <li>Tuangkan air hingga batu-batu terendam</li>
+  <li>Tambahkan minyak jelantah di atas air</li>
+  <li>Pasang sumbu di tengah wadah, pastikan bagian atas sumbu berada di atas permukaan minyak</li>
+  <li>Nyalakan sumbu dengan korek api</li>
+ </ol>
+ 
+ <p>Lilin ini akan menyala dengan stabil selama minyak tersedia. 
+  Jika minyak habis, cukup tambahkan lagi tanpa perlu mengganti sumbu atau air.
+ </p>
+
+ <div class="row">
+
+  <body>
+  </body>
+</div>
+</section>
+<!-- Contact Section End -->
+
+<!-- kekurangan Section Start -->
+ <section id="kekurangan" class="Kekurangan">
+  <a href="#" class="cta"> Kekurangan</a>
+  <p>Kekurangan Lilin Abadi dari Minyak Jelantah</p>
+  <ol>
+    <li>Bau tidak sedap</li>
+    <li>Asap yang dihasilkan lebih banyak membuat ruangan jadi pengap jika ventilasi buruk</li>
+    <li>Memiliki nilai estetika yang kurang jika tidak dirancang dengan baik</li>
+    <li>Tidak praktis untuk dibawa karena bentuknya yang cair</li>
+  </ol>
+  </section>
+
+  <section id="kelebihan" class="Kelebihan">
+    <a href="#" class="cta"> Kelebihan</a>
+    <p>Kelebihan Lilin abadi dari minyak jelantah </p>
+    <ol>
+      <li>Ramah lingkungan karena dapat mengurangi limbah</li>
+      <li>Hemat dan murah karena bahan bakunya gratis</li>
+      <li>Bisa dibuat sendiri di rumah karena bahannya yang sederhana</li>
+      <li>Memanfaatkan ulang minyak jelantah menjadi produk yang leih bermanfaat</li>
+    </ol>
+  </section>
+
+
+ <html Lang="en">
+  <body>
+
+    <!--Footer Section Start-->
+    <Footer>
+    
+      <div class="links">
+        <a href="home">Home</a>
+        <a href="member">Our Member</a>
+        <a href="produk">Produk</a>
+        <a href="proses">Proses</a>
+        <a href="kekurangan">Kekurangan</a>
+        <a href="kelebihan">Kelebihan</a>
+      </div>
+
+      <div class="credit">
+        <p> credit by klp 3| 2025 </p>
+      </div>
+      
+
+
+    </Footer>
+    <!--Footer Section End-->
+  </body>
+ </html>
+    <!-- Father Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
